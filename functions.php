@@ -8,4 +8,11 @@ function alura_register_menu()
   );
 }
 
+function alura_add_resources()
+{
+  add_theme_support('custom-logo');
+}
+
+//Registrando as funções
 add_action('init', 'alura_register_menu');
+add_action('after_setup_theme', 'alura_add_resources');
