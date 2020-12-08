@@ -57,16 +57,19 @@ footer {
   font-size: 16px;  
 }
 
-.banner {
-  width: 100%;
+footer p {
+  line-height: 0;
+  margin-bottom: 0;
 }
 
-.banner img {
-  width: 100%; 
+.banner {
+  max-width: 100%; 
+  margin-bottom: 16px;
 }
 
 section {
   max-width: 900px;
   width: 100%;
   margin: 32px auto;
+  padding: 8px;
 }
