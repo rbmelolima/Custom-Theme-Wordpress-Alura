@@ -7,10 +7,16 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap" rel="stylesheet">
   <title>
-    <?php bloginfo('name')?>
+    <?php bloginfo('name') ?>
   </title>
 
   <?php wp_head(); ?>
 </head>
 
 <body>
+
+  <?php
+  wp_nav_menu(array(
+    'menu' => 'menu-navigation'
+  ));
+  ?>
