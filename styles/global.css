@@ -37,7 +37,7 @@ nav {
   text-decoration: none;
   font-weight: bold;
   color: black;
-  font-size: 16px; 
+  font-size: 16px;
 }
 
 .header-navbar a:hover {
@@ -53,17 +53,17 @@ footer {
   justify-content: center;
   text-align: center;
   background-color: #fafafa;
-  font-weight: bold;
-  font-size: 16px;  
 }
 
 footer p {
   line-height: 0;
   margin-bottom: 0;
+  font-weight: bold;
+  font-size: 16px;
 }
 
 .banner {
-  max-width: 100%; 
+  max-width: 100%;
   margin-bottom: 16px;
 }
 
