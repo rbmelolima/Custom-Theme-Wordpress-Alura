@@ -1,9 +1,17 @@
-<?php 
-  require_once 'components/header.php';
-?>
+<?php
+require_once 'components/header.php';
 
-<h1>Hello World</h1>
+if (have_posts()) :
+  while (have_posts()) : the_post();
+    echo '<div class=\'banner\'>';
+    the_post_thumbnail();
+    echo '</div>';
 
-<?php 
-  require_once 'components/footer.php';
-?>
+    echo '<section>';
+    the_title('<h1>', '</h1>');
+    the_content();
+    echo '</section>';
+  endwhile;
+endif;
+
+require_once 'components/footer.php';
