@@ -11,6 +11,7 @@ function alura_register_menu()
 function alura_add_resources()
 {
   add_theme_support('custom-logo');
+  add_theme_support('post-thumbnails');
 }
 
 //Registrando as funções
