@@ -1,6 +1,7 @@
 <?php require_once 'components/header.php'; ?>
 
 <main>
+
   <section class="grid-destiny">
     <?php
     $args = array('post_type' => 'destiny');
@@ -9,10 +10,11 @@
     if ($query->have_posts()) :
       while ($query->have_posts()) : $query->the_post();
         echo '<div class=\'card\'>';
-        the_post_thumbnail(
-          'post-thumbnail',
-          array('class' => 'card-image')
-        );
+        
+        $url = get_the_post_thumbnail_url(null, 'post-thumbnail');
+        $cardImage = "<div style='background-image: url({$url})' class='card-image'></div>";
+        echo $cardImage;   
+
         the_title('<h2>', '</h2>');
         the_content();
         echo '</div>';
@@ -20,7 +22,6 @@
     endif;
     ?>
   </section>
-
 </main>
 
 

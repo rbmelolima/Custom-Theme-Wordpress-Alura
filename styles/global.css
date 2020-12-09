@@ -84,29 +84,47 @@ footer p {
 }
 
 section {
-  max-width: 900px;
+  max-width: 1200px;
   width: 100%;
   margin: 32px auto;
   padding: 8px;
 }
 
 /* Page Destiny */
+.grid-destiny {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media screen and (min-width: 748px) {
+  .grid-destiny {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 956px) {
+  .grid-destiny {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
 .card {
-  max-width: 400px;
   width: 100%;
   padding: 12px;
   border: 1px solid #dbdbdb;
 }
 
-.card .card-image {
-  max-width: 400px;
+.card .card-image {  
   width: 100%;
-  height: auto;
+  height: 250px;
   margin-bottom: 12px;
+  background-position: center;
+  background-size: cover;
 }
 
-.grid-destiny {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
+@media screen and (min-width: 748px) {
+  .card .card-image {     
+    height: 200px;    
+  }
 }
