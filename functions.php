@@ -24,7 +24,7 @@ function alura_register_custom_post()
     array(
       'labels' => array('name' => 'Destinos'),
       'public' => true,
-      'menu_position' => 0,
+      'menu_position' => 1,
       'supports' => array('title', 'editor', 'thumbnail'),
       'menu_icon' => 'dashicons-admin-site'
     )
@@ -43,8 +43,22 @@ function alura_register_taxonomy(){
   );
 }
 
+function alura_register_custom_post_banner(){
+  register_post_type(
+    'banners',
+    array(
+      'labels' => array('name' => 'Banner'),
+      'public' => true,
+      'menu_position' => 0,
+      'supports' => array('title', 'thumbnail'),
+      'menu_icon' => 'dashicons-format-image'
+    )
+  );
+}
+
 //Registrando as funções
 add_action('init', 'alura_register_menu');
 add_action('init', 'alura_register_custom_post');
 add_action('init', 'alura_register_taxonomy');
+add_action('init', 'alura_register_custom_post_banner');
 add_action('after_setup_theme', 'alura_add_resources');
