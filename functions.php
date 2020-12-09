@@ -31,7 +31,20 @@ function alura_register_custom_post()
   );
 }
 
+//Criando taxonomias personalizadas
+function alura_register_taxonomy(){
+  register_taxonomy(
+    'country',
+    'destiny',
+    array(
+      'labels' => array('name' => 'Países'),
+      'hierarchical' => true      
+    )
+  );
+}
+
 //Registrando as funções
 add_action('init', 'alura_register_menu');
 add_action('init', 'alura_register_custom_post');
+add_action('init', 'alura_register_taxonomy');
 add_action('after_setup_theme', 'alura_add_resources');
