@@ -4,10 +4,10 @@
   <?php
   if (have_posts()) :
     while (have_posts()) : the_post();
-      the_post_thumbnail(
-        'post-thumbnail',
-        array('class' => 'banner')
-      );
+      $url = get_the_post_thumbnail_url(null, 'post-thumbnail');
+      $banner = "<div style='background-image: url({$url})' class='banner'></div>";
+
+      echo $banner;   
 
       echo '<section>';
       the_title('<h1>', '</h1>');
