@@ -203,3 +203,44 @@ section {
 #page-destiny form button:active {
   background-color: #38478a;
 }
+
+/*Page Home */
+
+#page-home .banner {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 80vh;
+  position: relative;
+}
+
+#page-home .banner .overlay {
+  width: 100%;
+  height: 80vh;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+#page-home .dynamic-text-container {
+  z-index: 3;
+}
+
+#page-home .dynamic-text-container span {
+  color: #fff;
+  font-weight: 600;
+  font-size: 6rem;
+}
+
+@media screen and (max-width: 768px) {
+  #page-home .dynamic-text-container span {
+    font-size: 3rem;
+  }
+}
